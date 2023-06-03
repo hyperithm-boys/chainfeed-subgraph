@@ -224,9 +224,9 @@ export class Unpause__Params {
   }
 }
 
-export class DAI extends ethereum.SmartContract {
-  static bind(address: Address): DAI {
-    return new DAI("DAI", address);
+export class LINK extends ethereum.SmartContract {
+  static bind(address: Address): LINK {
+    return new LINK("LINK", address);
   }
 
   name(): string {

@@ -224,9 +224,9 @@ export class Unpause__Params {
   }
 }
 
-export class usdt extends ethereum.SmartContract {
-  static bind(address: Address): usdt {
-    return new usdt("usdt", address);
+export class USDT extends ethereum.SmartContract {
+  static bind(address: Address): USDT {
+    return new USDT("USDT", address);
   }
 
   name(): string {

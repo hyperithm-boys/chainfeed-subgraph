@@ -1,4 +1,4 @@
-import { PairCreated as PairCreatedEvent } from "../generated/UniswapV2Factory/UniswapV2Factory"
+import { PairCreated as PairCreatedEvent } from "../generated/Contract/Contract"
 import { PairCreated } from "../generated/schema"
 
 export function handlePairCreated(event: PairCreatedEvent): void {

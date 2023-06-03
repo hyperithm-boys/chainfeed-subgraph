@@ -17,12 +17,12 @@ dataSources:
         - Transfer
       abis:
         - name: usdt
-          file: ./abis/usdt.json
+          file: ./abis/erc20.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
           receipt: true
-      file: ./src/usdt.ts
+      file: ./src/erc20.ts
   - kind: ethereum
     name: dai
     network: mainnet
@@ -35,13 +35,11 @@ dataSources:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - Approval
-        - LogNote
-        - daiTransfer
+        - Transfer
       abis:
         - name: dai
-          file: ./abis/dai.json
+          file: ./abis/erc20.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: ./src/dai.ts
+      file: ./src/erc20.ts

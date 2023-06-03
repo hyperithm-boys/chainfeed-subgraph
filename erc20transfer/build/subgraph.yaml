@@ -17,7 +17,7 @@ dataSources:
         - Transfer
       abis:
         - name: usdt
-          file: usdt/abis/usdt.json
+          file: usdt/abis/erc20.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
@@ -35,13 +35,11 @@ dataSources:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - Approval
-        - LogNote
-        - daiTransfer
+        - Transfer
       abis:
         - name: dai
-          file: dai/abis/dai.json
+          file: dai/abis/erc20.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: dai/dai.wasm
+      file: usdt/usdt.wasm

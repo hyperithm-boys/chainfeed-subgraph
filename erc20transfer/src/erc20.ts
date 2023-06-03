@@ -13,7 +13,7 @@ export function handleTransfer(event: TransferEvent): void {
   entity.blockTimestamp = event.block.timestamp;
   entity.transactionHash = event.transaction.hash;
 
-  entity.tokenAddress = event.transaction.to;
+  entity.tokenAddress = event.address;
 
   entity.save();
 }

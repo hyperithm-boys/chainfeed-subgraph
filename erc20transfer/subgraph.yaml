@@ -23,3 +23,25 @@ dataSources:
           handler: handleTransfer
           receipt: true
       file: ./src/usdt.ts
+  - kind: ethereum
+    name: dai
+    network: mainnet
+    source:
+      address: "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+      abi: dai
+      startBlock: 17000000
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - LogNote
+        - daiTransfer
+      abis:
+        - name: dai
+          file: ./abis/dai.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/dai.ts
